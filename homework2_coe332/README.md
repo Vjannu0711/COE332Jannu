@@ -1,4 +1,4 @@
-# **MARS JOURNEY ROBOT MOTION AND TRACKING**
+# **THE MARTIAN ROBOT JOURNEY**
 
 This repository contains three files: `random_sites.py`, `generate_random_sites.json`, `robot_motion.py`
 This project is important in developing my skills of reading files and writing into JSON files using Python. In the real world, reading in large datasets, data manipulation, and generating structured data are very common tasks of countless IT professions including data scientists and software engineers.
