@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vjannu11-test-flask-deployment
+  labels:
+    username: vjannu11
+    env: test
+    app: vjannu11-test-flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vjannu11-test-flask
+  template:
+    metadata:
+      labels:
+        app: vjannu11-test-flask
+    spec:
+      containers:
+        - name: flask-latest
+          image: vjannu11/homework06_flask:latest

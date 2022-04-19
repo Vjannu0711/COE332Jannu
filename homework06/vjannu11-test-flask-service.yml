@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vjannu11-test-flask-service
+  labels:
+    username: vjannu11
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: vjannu11-test-flask
+  ports:
+  - name: vjannu11-flask
+    port: 5000
+    targetPort: 5000

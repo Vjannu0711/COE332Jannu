@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw6-vjannu11-test-redis-deployment
+  labels:
+    app: hw6-vjannu11-test-redis
+    env: test
+    username: vjannu11
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hw6-vjannu11-test-redis
+  template:
+    metadata:
+      labels:
+        app: hw6-vjannu11-test-redis
+        env: test
+        username: vjannu11
+    spec:
+      containers:
+        - name: data-redis
+          image: redis:6
+          ports:
+          - name: http
+            containerPort: 6379
+          volumeMounts:
+            - name: redis-test-volume
+              mountPath: "/data"
+      volumes:
+        - name: redis-test-volume
+          persistentVolumeClaim:
+            claimName: redis-test-volume

@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-test-service
+  labels:
+    app: hw6-vjannu11-test-redis
+    env: test
+    username: vjannu11
+spec:
+  type: ClusterIP
+  selector:
+    app: hw6-vjannu11-test-redis
+  ports:
+  - name: hw6-vjannu11-test-redis
+    port: 6379
+    targetPort: 6379
