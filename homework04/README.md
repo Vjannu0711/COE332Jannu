@@ -66,7 +66,7 @@ to output the:
 It does this using 3 functions:
 - ``compute_average_mass()`` takes all the values under the "mass (g)" key of each dictionary in the list and computes the average of those values. 
 - ``check_hemisphere()`` takes the longitude and latitude keys of each dictionary in the list and determines whether the meteorite landed in the Northern or Southern Hemisphere, and then whether it landed in the Eastern or Western Hemisphere, and outputs the result of both. 
-- ``count_classes()`` function takes the "recclass" key of each dictionary in the list and counts how many of each class are present in it, outputing a dictionary containing the class as a key and the count as the value. 
+- ``count_classes()`` function takes the "recclass" key of each dictionary in the list and counts how many of each class are present in it, outputting a dictionary containing the class as a key and the count as the value. 
 
 The expected output should look something like:
 
@@ -104,4 +104,4 @@ The expected output should look something like:
     
 ## test_ml_data_analysis.py
 
-This script contains the unit tests for the previous script, ``ml_data_analysis.py``, and is used to test the functions for it. It tests to make sure the functions ``compute_average_mass()``, ``check_hemisphere()``, and ``count_classes()`` are arithmetically correct and output the correct values and data types. It also checks that there is an error when there should be an error. When running this script with pytest, all tests should pass.
+This script contains the unit tests for the ``ml_data_analysis.py`` file, and is used to test the functions for it. It tests to make sure the functions ``compute_average_mass()``, ``check_hemisphere()``, and ``count_classes()`` are working as intended and output the correct values and data types.
